@@ -16,7 +16,6 @@ class TrendingSongs extends StatelessWidget {
     'Bad Guy',
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,20 +25,17 @@ class TrendingSongs extends StatelessWidget {
         children: <Widget>[
           Text(
             'Trending Songs',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.headline6,
           ),
           SizedBox(
             height: 15,
           ),
-          Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.54,
-            child: SingleChildScrollView(
-              child: Column(
-                children: songs.map((songName) => SongTile(songName)).toList()
-              ),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (ctx, i) => SongTile(songs[i]),
+              itemCount: songs.length,
             ),
-          )
+          ),
         ],
       ),
     );

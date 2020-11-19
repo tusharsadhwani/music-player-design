@@ -4,7 +4,7 @@ class SongTile extends StatelessWidget {
   final String songName;
 
   SongTile(this.songName);
-  
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -26,7 +26,7 @@ class SongTile extends StatelessWidget {
             ),
             subtitle: Text('3:42'),
             trailing: Icon(
-              Icons.play_arrow, 
+              Icons.play_arrow,
               color: Colors.black87,
             ),
           ),

@@ -15,20 +15,20 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         primarySwatch: Colors.purple,
         textTheme: TextTheme(
-          title: TextStyle(
+          headline6: TextStyle(
             color: Colors.black,
             fontFamily: 'PlayfairDisplay',
-            fontSize: 36, 
+            fontSize: 36,
             fontWeight: FontWeight.bold,
           ),
         ),
         appBarTheme: AppBarTheme(
           color: Colors.white,
           textTheme: TextTheme(
-            title: TextStyle(
+            headline6: TextStyle(
               color: Colors.black,
               fontFamily: 'PlayfairDisplay',
-              fontSize: 26, 
+              fontSize: 26,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -48,7 +48,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           PopularGenres(),
-          TrendingSongs(),
+          Expanded(child: TrendingSongs()),
         ],
       ),
     );
